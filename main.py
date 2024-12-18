@@ -76,4 +76,26 @@ print(personal_computer.delete_data())
 print(personal_computer.display_image())
 
 
+class PersonalComputerComp:
 
+    def __init__(self, powersupply_obj: object = PowerSupply, motherboard_obj: object = Motherboard, cpu_obj: object = CPU, ram_obj: object = RAM, ssd_obj: object = SSD, gpu_obj: object = GPU):
+        self.powersupply = powersupply_obj
+        self.motherboard = motherboard_obj
+        self.cpu = cpu_obj
+        self.ram = ram_obj
+        self.ssd = ssd_obj
+        self.gpu = gpu_obj
+
+powersupply = PowerSupply('500')
+motherboard = Motherboard('X470')
+cpu = CPU('3.8','8')
+ram = RAM('16','3200')
+ssd = SSD('500')
+gpu = GPU('Nvidia GTX 1080', '8')
+computer = PersonalComputerComp(powersupply, motherboard, cpu, ram, ssd, gpu)
+print(computer.powersupply)
+print(computer.motherboard)
+print(computer.cpu)
+print(computer.ram)
+print(computer.ssd)
+print(computer.gpu)
